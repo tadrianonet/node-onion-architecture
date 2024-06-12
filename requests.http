@@ -1,0 +1,26 @@
+# Teste de Health Check
+GET http://localhost:3000/health
+Accept: application/json
+
+###
+
+# Criar um novo usuário
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "name": "Thiago S Adriano",
+    "email": "tadriano@fiap.com.br"
+}
+
+###
+
+# Obter usuário pelo ID (substitua {userId} pelo ID retornado na resposta da criação de usuário)
+GET http://localhost:3000/api/users/{userId}
+Accept: application/json
+ 
+###
+
+# Listar todos os usuários
+GET http://localhost:3000/api/users
+Accept: application/json
